@@ -2,7 +2,7 @@ class TaskController < ApplicationController
 end
 
 def index
-    @restaurants = Restaurant.all
+    @task = Task.all
 end
 
 def show
@@ -31,8 +31,12 @@ end
 def destroy
     @task = Task.find(params[:id])
     @task.destroy
+    redirect_to tasks_path
 
     # no need for app/views/task/destroy.html.erb
     redirect_to restaurants_path
 end
 
+private
+
+def params
