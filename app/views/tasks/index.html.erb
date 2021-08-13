@@ -1,5 +1,5 @@
-<ul>
+<h1>Nuestra Pagina de Inicio</h1>
 <% @task.each do |t|%>
-    <li><%= "#{t.tittle}, #{t.details}, #{t.completed}"%></li>
+    <h2><%= link_to task.tittle, task_path(t)%><%= task.details%><%= task.completed%></h2>
 <%end%>
-</ul>
+

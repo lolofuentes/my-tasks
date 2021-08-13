@@ -1,3 +1,12 @@
 <h2>titleeee<%= @task.title%></h2>
 <p>blabla<%= @task.details%></p>
 <p>bla<%= @task.completed%></p>
+
+<%= link_to "Delete #{@task.name}", # remplazar name por tittle?
+            tasks_path(@task),
+            method: :delete,
+            data: { confirm: "Are you sure?" } %>
+
+<a data-confirm="Are you sure?" rel="nofollow" data-method="delete" href="/tasks/2">
+  Delete the spoon
+</a>

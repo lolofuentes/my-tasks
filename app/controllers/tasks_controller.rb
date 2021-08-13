@@ -1,4 +1,8 @@
 class TasksController < ApplicationController
+    
+    def index
+        @task = Task.all
+    end
 
     def new
         @restaurant = Restaurant.new # needed to instantiate the form_for
@@ -9,11 +13,7 @@ class TasksController < ApplicationController
         @task.save
         redirect_to tasks_path(@task)
     end
-
-    def index
-        @task = Task.all
-    end
-
+ 
     def edit
         @task = Task.find(params[:id])
     end
