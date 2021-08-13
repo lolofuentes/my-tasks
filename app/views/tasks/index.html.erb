@@ -1,6 +1,5 @@
-<h1>welcome</h1>
+<ul>
 <% @task.each do |t|%>
-    <ul>
-        <li><%= "#{t.tittle}, #{t.details}, #{t.completed}"%></li>
-    </ul>
+    <li><%= "#{t.tittle}, #{t.details}, #{t.completed}"%></li>
 <%end%>
+</ul>
