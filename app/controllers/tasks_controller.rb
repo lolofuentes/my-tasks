@@ -38,5 +38,5 @@ end
 private
 
 def params_tasks
-    params.require (:task)permit(:tittle :details :completed)
+    params.require(:task)permit(:tittle :details :completed)
 end
