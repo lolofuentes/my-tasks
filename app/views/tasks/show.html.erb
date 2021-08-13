@@ -1,8 +1,10 @@
-<h2>titleeee<%= @task.title%></h2>
-<p>blabla<%= @task.details%></p>
-<p>bla<%= @task.completed%></p>
+<h2><%= @task.tittle%></h2>
+<p><%= @task.details%></p>
+<p><%= @task.completed%></p>
 
-<%= link_to "Delete #{@task.name}", # remplazar name por tittle?
+<% <%= link_to  "volver al listado", task_path %>
+
+<%= link_to "Delete #{@task.tittle}", # remplazar name por tittle?
             tasks_path(@task),
             method: :delete,
             data: { confirm: "Are you sure?" } %>
