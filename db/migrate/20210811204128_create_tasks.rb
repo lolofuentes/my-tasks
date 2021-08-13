@@ -8,4 +8,9 @@ class CreateTasks < ActiveRecord::Migration[6.0]
       t.timestamps
     end
   end
+
+  def change
+    add_column :tasks, :tittle, :completed
+  end
+
 end

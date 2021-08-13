@@ -1,4 +1,4 @@
-class TaskController < ApplicationController
+class TasksController < ApplicationController
 end
 
 def index
@@ -32,11 +32,11 @@ def destroy
     @task = Task.find(params[:id])
     @task.destroy
     redirect_to tasks_path
-
     # no need for app/views/task/destroy.html.erb
-    redirect_to restaurants_path
 end
 
 private
 
-def params
+def params_tasks
+    params.require (:task)permit(:tittle :details :completed)
+end
